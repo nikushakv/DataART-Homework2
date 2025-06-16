@@ -2,6 +2,7 @@
 using Calendar.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using Calendar.Core.Services; // Add this using directive
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +10,9 @@ var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlite(connectionString, b => b.MigrationsAssembly("Calendar.API")));
+
+// Register the scheduling service
+builder.Services.AddScoped<SchedulingService>(); 
 
 builder.Services.AddControllers();
 
