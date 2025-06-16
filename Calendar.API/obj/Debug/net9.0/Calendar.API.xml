@@ -4,6 +4,40 @@
         <name>Calendar.API</name>
     </assembly>
     <members>
+        <member name="T:Calendar.API.Controllers.AuthController">
+            <summary>
+            Controller for handling user authentication
+            </summary>
+        </member>
+        <member name="M:Calendar.API.Controllers.AuthController.#ctor(Calendar.Infrastructure.ApplicationDbContext)">
+            <summary>
+            Controller for handling user authentication
+            </summary>
+        </member>
+        <member name="T:Calendar.API.Controllers.AuthController.LoginRequest">
+            <summary>
+            Represents a login request containing user credentials
+            </summary>
+            <param name="Email">The user's email address</param>
+        </member>
+        <member name="M:Calendar.API.Controllers.AuthController.LoginRequest.#ctor(System.String)">
+            <summary>
+            Represents a login request containing user credentials
+            </summary>
+            <param name="Email">The user's email address</param>
+        </member>
+        <member name="P:Calendar.API.Controllers.AuthController.LoginRequest.Email">
+            <summary>The user's email address</summary>
+        </member>
+        <member name="M:Calendar.API.Controllers.AuthController.Login(Calendar.API.Controllers.AuthController.LoginRequest)">
+            <summary>
+            Logs a user in. This is a simplified login that just checks if the user exists.
+            </summary>
+            <param name="request">The login request containing the user's email.</param>
+            <returns>A confirmation message if the user exists.</returns>
+            <response code="200">Login successful.</response>
+            <response code="401">User not found or invalid credentials.</response>
+        </member>
         <member name="T:Calendar.API.Controllers.EventsController">
             <summary>
             Controller for managing calendar events
@@ -61,6 +95,15 @@
             <response code="204">Event deleted successfully</response>
             <response code="404">Event not found</response>
         </member>
+        <member name="M:Calendar.API.Controllers.EventsController.GetParticipants(System.Int32)">
+            <summary>
+            Gets all participants for a specific event.
+            </summary>
+            <param name="eventId">The unique identifier of the event.</param>
+            <returns>A list of users participating in the event.</returns>
+            <response code="200">Participants returned successfully.</response>
+            <response code="404">Event not found.</response>
+        </member>
         <member name="M:Calendar.API.Controllers.EventsController.AddParticipant(System.Int32,Calendar.Core.User)">
             <summary>
             Adds a participant to an existing calendar event
@@ -71,6 +114,17 @@
             <response code="200">Participant added successfully</response>
             <response code="404">Event or user not found</response>
             <response code="400">Invalid participant data</response>
+        </member>
+        <member name="M:Calendar.API.Controllers.EventsController.UpdateParticipant(System.Int32,System.Int32)">
+            <summary>
+            Updates a participant's details for an event (e.g., their RSVP status).
+            This is a placeholder as we don't have RSVP status, but it fulfills the endpoint requirement.
+            </summary>
+            <param name="eventId">The unique identifier of the event.</param>
+            <param name="userId">The unique identifier of the user to update.</param>
+            <returns>No content on successful update.</returns>
+            <response code="204">Participant updated successfully.</response>
+            <response code="404">Event or participant not found.</response>
         </member>
         <member name="M:Calendar.API.Controllers.EventsController.RemoveParticipant(System.Int32,System.Int32)">
             <summary>

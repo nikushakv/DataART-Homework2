@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Calendar.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+82b39bb3f23dedccd4ea16ca2f01273f75bd07aa")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9c79bbd9aa9c33e7e323bf43c6ef5a3ffa14dd47")]
 [assembly: System.Reflection.AssemblyProductAttribute("Calendar.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Calendar.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
