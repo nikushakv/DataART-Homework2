@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Calendar.Core\Calendar.Core.csproj" />
+    <ProjectReference Include="..\Calendar.API\Calendar.API.csproj" />
   </ItemGroup>
 
 </Project>

@@ -4,6 +4,91 @@
     "C:\\Users\\kvini\\OneDrive\\Desktop\\AiCalendar\\Calendar.Tests\\Calendar.Tests.csproj": {}
   },
   "projects": {
+    "C:\\Users\\kvini\\OneDrive\\Desktop\\AiCalendar\\Calendar.API\\Calendar.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\kvini\\OneDrive\\Desktop\\AiCalendar\\Calendar.API\\Calendar.API.csproj",
+        "projectName": "Calendar.API",
+        "projectPath": "C:\\Users\\kvini\\OneDrive\\Desktop\\AiCalendar\\Calendar.API\\Calendar.API.csproj",
+        "packagesPath": "C:\\Users\\kvini\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kvini\\OneDrive\\Desktop\\AiCalendar\\Calendar.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\kvini\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\kvini\\OneDrive\\Desktop\\AiCalendar\\Calendar.Core\\Calendar.Core.csproj": {
+                "projectPath": "C:\\Users\\kvini\\OneDrive\\Desktop\\AiCalendar\\Calendar.Core\\Calendar.Core.csproj"
+              },
+              "C:\\Users\\kvini\\OneDrive\\Desktop\\AiCalendar\\Calendar.Infrastructure\\Calendar.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\kvini\\OneDrive\\Desktop\\AiCalendar\\Calendar.Infrastructure\\Calendar.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[9.0.6, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.6, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[9.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\kvini\\OneDrive\\Desktop\\AiCalendar\\Calendar.Core\\Calendar.Core.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -63,6 +148,75 @@
         }
       }
     },
+    "C:\\Users\\kvini\\OneDrive\\Desktop\\AiCalendar\\Calendar.Infrastructure\\Calendar.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\kvini\\OneDrive\\Desktop\\AiCalendar\\Calendar.Infrastructure\\Calendar.Infrastructure.csproj",
+        "projectName": "Calendar.Infrastructure",
+        "projectPath": "C:\\Users\\kvini\\OneDrive\\Desktop\\AiCalendar\\Calendar.Infrastructure\\Calendar.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\kvini\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kvini\\OneDrive\\Desktop\\AiCalendar\\Calendar.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\kvini\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\kvini\\OneDrive\\Desktop\\AiCalendar\\Calendar.Core\\Calendar.Core.csproj": {
+                "projectPath": "C:\\Users\\kvini\\OneDrive\\Desktop\\AiCalendar\\Calendar.Core\\Calendar.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[9.0.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\kvini\\OneDrive\\Desktop\\AiCalendar\\Calendar.Tests\\Calendar.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -85,6 +239,9 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
+              "C:\\Users\\kvini\\OneDrive\\Desktop\\AiCalendar\\Calendar.API\\Calendar.API.csproj": {
+                "projectPath": "C:\\Users\\kvini\\OneDrive\\Desktop\\AiCalendar\\Calendar.API\\Calendar.API.csproj"
+              },
               "C:\\Users\\kvini\\OneDrive\\Desktop\\AiCalendar\\Calendar.Core\\Calendar.Core.csproj": {
                 "projectPath": "C:\\Users\\kvini\\OneDrive\\Desktop\\AiCalendar\\Calendar.Core\\Calendar.Core.csproj"
               }

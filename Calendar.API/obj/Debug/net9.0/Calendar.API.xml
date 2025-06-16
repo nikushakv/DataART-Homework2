@@ -82,51 +82,59 @@
             <response code="204">Participant removed successfully</response>
             <response code="404">Event or participant not found</response>
         </member>
-        <member name="T:Calendar.API.Controllers.AvailabilityController">
-            <summary>
-            Controller for intelligent scheduling and finding available time slots
-            </summary>
-        </member>
-        <member name="M:Calendar.API.Controllers.AvailabilityController.#ctor(Calendar.Infrastructure.ApplicationDbContext,Calendar.Core.Services.SchedulingService)">
-            <summary>
-            Controller for intelligent scheduling and finding available time slots
-            </summary>
-        </member>
-        <member name="M:Calendar.API.Controllers.AvailabilityController.FindAvailableSlots(System.Collections.Generic.List{System.Int32},System.DateTime,System.DateTime,System.Int32)">
-            <summary>
-            Finds available time slots for multiple users within a specified time range
-            </summary>
-            <param name="userIds">List of user IDs to check availability for</param>
-            <param name="searchStart">Start date and time for the search window</param>
-            <param name="searchEnd">End date and time for the search window</param>
-            <param name="durationInMinutes">Required duration for the meeting in minutes</param>
-            <returns>A list of available time slots that work for all specified users</returns>
-            <response code="200">Available slots found and returned</response>
-            <response code="400">Invalid parameters provided (e.g., no user IDs specified)</response>
-            <response code="500">Error occurred while processing the request</response>
-        </member>
         <member name="T:Calendar.API.Controllers.SchedulingController">
             <summary>
-            Controller for intelligent scheduling and finding available time slots
+            Handles intelligent scheduling operations.
             </summary>
         </member>
         <member name="M:Calendar.API.Controllers.SchedulingController.#ctor(Calendar.Infrastructure.ApplicationDbContext,Calendar.Core.Services.SchedulingService)">
             <summary>
-            Controller for intelligent scheduling and finding available time slots
+            Handles intelligent scheduling operations.
             </summary>
         </member>
         <member name="M:Calendar.API.Controllers.SchedulingController.FindAvailableSlots(System.Collections.Generic.List{System.Int32},System.DateTime,System.DateTime,System.Int32)">
             <summary>
-            Finds available time slots for multiple users within a specified time range
+            Finds available time slots for a group of users.
             </summary>
-            <param name="userIds">List of user IDs to check availability for</param>
-            <param name="searchStart">Start date and time for the search window</param>
-            <param name="searchEnd">End date and time for the search window</param>
-            <param name="durationInMinutes">Required duration for the meeting in minutes</param>
-            <returns>A list of available time slots that work for all specified users</returns>
-            <response code="200">Available slots found and returned</response>
-            <response code="400">Invalid parameters provided (e.g., no user IDs specified)</response>
-            <response code="500">Error occurred while processing the request</response>
+            <param name="userIds">A comma-separated list of user IDs to include in the search.</param>
+            <param name="searchStart">The start of the time window to search within.</param>
+            <param name="searchEnd">The end of the time window to search within.</param>
+            <param name="durationInMinutes">The required duration of the meeting in minutes.</param>
+        </member>
+        <member name="T:Calendar.API.Controllers.UsersController">
+            <summary>
+            Manages user-related operations.
+            </summary>
+        </member>
+        <member name="M:Calendar.API.Controllers.UsersController.#ctor(Calendar.Infrastructure.ApplicationDbContext)">
+            <summary>
+            Manages user-related operations.
+            </summary>
+        </member>
+        <member name="M:Calendar.API.Controllers.UsersController.CreateUser(Calendar.Core.User)">
+            <summary>
+            Creates a new user.
+            </summary>
+        </member>
+        <member name="M:Calendar.API.Controllers.UsersController.GetAllUsers">
+            <summary>
+            Gets a list of all users.
+            </summary>
+        </member>
+        <member name="M:Calendar.API.Controllers.UsersController.GetUserById(System.Int32)">
+            <summary>
+            Gets a specific user by their ID.
+            </summary>
+        </member>
+        <member name="M:Calendar.API.Controllers.UsersController.UpdateUser(System.Int32,Calendar.Core.User)">
+            <summary>
+            Updates an existing user.
+            </summary>
+        </member>
+        <member name="M:Calendar.API.Controllers.UsersController.DeleteUser(System.Int32)">
+            <summary>
+            Deletes a user by their ID.
+            </summary>
         </member>
         <member name="T:Calendar.API.Migrations.InitialCreate">
             <inheritdoc />
@@ -139,6 +147,13 @@
         </member>
         <member name="M:Calendar.API.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
             <inheritdoc />
+        </member>
+        <member name="T:Program">
+            <summary>
+            The main entry point for the application.
+            This partial class declaration makes the auto-generated Program class public,
+            which is a requirement for the WebApplicationFactory used in integration tests.
+            </summary>
         </member>
     </members>
 </doc>
