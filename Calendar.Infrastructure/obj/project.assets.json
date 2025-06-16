@@ -1153,8 +1153,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Users\\kvini\\OneDrive\\Desktop\\AICALENDAR\\Calendar.Core\\Calendar.Core.csproj": {
-              "projectPath": "C:\\Users\\kvini\\OneDrive\\Desktop\\AICALENDAR\\Calendar.Core\\Calendar.Core.csproj"
+            "C:\\Users\\kvini\\OneDrive\\Desktop\\AiCalendar\\Calendar.Core\\Calendar.Core.csproj": {
+              "projectPath": "C:\\Users\\kvini\\OneDrive\\Desktop\\AiCalendar\\Calendar.Core\\Calendar.Core.csproj"
             }
           }
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DiZA+Gfu6tQ=",
+  "dgSpecHash": "TjcKbxCpI4s=",
   "success": true,
-  "projectFilePath": "C:\\Users\\kvini\\OneDrive\\Desktop\\AICALENDAR\\Calendar.API\\Calendar.API.csproj",
+  "projectFilePath": "C:\\Users\\kvini\\OneDrive\\Desktop\\AiCalendar\\Calendar.API\\Calendar.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kvini\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\kvini\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.6\\microsoft.aspnetcore.openapi.9.0.6.nupkg.sha512",
