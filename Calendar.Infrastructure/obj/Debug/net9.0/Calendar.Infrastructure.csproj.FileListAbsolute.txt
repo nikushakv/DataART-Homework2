@@ -1,0 +1,16 @@
+C:\Users\kvini\OneDrive\Desktop\AICALENDAR\Calendar.Infrastructure\bin\Debug\net9.0\Calendar.Infrastructure.deps.json
+C:\Users\kvini\OneDrive\Desktop\AICALENDAR\Calendar.Infrastructure\bin\Debug\net9.0\Calendar.Infrastructure.dll
+C:\Users\kvini\OneDrive\Desktop\AICALENDAR\Calendar.Infrastructure\bin\Debug\net9.0\Calendar.Infrastructure.pdb
+C:\Users\kvini\OneDrive\Desktop\AICALENDAR\Calendar.Infrastructure\bin\Debug\net9.0\Calendar.Core.dll
+C:\Users\kvini\OneDrive\Desktop\AICALENDAR\Calendar.Infrastructure\bin\Debug\net9.0\Calendar.Core.pdb
+C:\Users\kvini\OneDrive\Desktop\AICALENDAR\Calendar.Infrastructure\obj\Debug\net9.0\Calendar.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\kvini\OneDrive\Desktop\AICALENDAR\Calendar.Infrastructure\obj\Debug\net9.0\Calendar.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kvini\OneDrive\Desktop\AICALENDAR\Calendar.Infrastructure\obj\Debug\net9.0\Calendar.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\kvini\OneDrive\Desktop\AICALENDAR\Calendar.Infrastructure\obj\Debug\net9.0\Calendar.Infrastructure.AssemblyInfo.cs
+C:\Users\kvini\OneDrive\Desktop\AICALENDAR\Calendar.Infrastructure\obj\Debug\net9.0\Calendar.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\kvini\OneDrive\Desktop\AICALENDAR\Calendar.Infrastructure\obj\Debug\net9.0\Calendar.Infrastructure.sourcelink.json
+C:\Users\kvini\OneDrive\Desktop\AICALENDAR\Calendar.Infrastructure\obj\Debug\net9.0\Calendar.B9D46F5E.Up2Date
+C:\Users\kvini\OneDrive\Desktop\AICALENDAR\Calendar.Infrastructure\obj\Debug\net9.0\Calendar.Infrastructure.dll
+C:\Users\kvini\OneDrive\Desktop\AICALENDAR\Calendar.Infrastructure\obj\Debug\net9.0\refint\Calendar.Infrastructure.dll
+C:\Users\kvini\OneDrive\Desktop\AICALENDAR\Calendar.Infrastructure\obj\Debug\net9.0\Calendar.Infrastructure.pdb
+C:\Users\kvini\OneDrive\Desktop\AICALENDAR\Calendar.Infrastructure\obj\Debug\net9.0\ref\Calendar.Infrastructure.dll

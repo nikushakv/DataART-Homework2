@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kvini\\OneDrive\\Desktop\\AiCalendar\\Calendar.Core\\Calendar.Core.csproj": {}
+    "C:\\Users\\kvini\\OneDrive\\Desktop\\AICALENDAR\\Calendar.Core\\Calendar.Core.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kvini\\OneDrive\\Desktop\\AiCalendar\\Calendar.Core\\Calendar.Core.csproj": {
+    "C:\\Users\\kvini\\OneDrive\\Desktop\\AICALENDAR\\Calendar.Core\\Calendar.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kvini\\OneDrive\\Desktop\\AiCalendar\\Calendar.Core\\Calendar.Core.csproj",
+        "projectUniqueName": "C:\\Users\\kvini\\OneDrive\\Desktop\\AICALENDAR\\Calendar.Core\\Calendar.Core.csproj",
         "projectName": "Calendar.Core",
-        "projectPath": "C:\\Users\\kvini\\OneDrive\\Desktop\\AiCalendar\\Calendar.Core\\Calendar.Core.csproj",
+        "projectPath": "C:\\Users\\kvini\\OneDrive\\Desktop\\AICALENDAR\\Calendar.Core\\Calendar.Core.csproj",
         "packagesPath": "C:\\Users\\kvini\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kvini\\OneDrive\\Desktop\\AiCalendar\\Calendar.Core\\obj\\",
+        "outputPath": "C:\\Users\\kvini\\OneDrive\\Desktop\\AICALENDAR\\Calendar.Core\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\kvini\\AppData\\Roaming\\NuGet\\NuGet.Config"
