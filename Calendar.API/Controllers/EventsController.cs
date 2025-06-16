@@ -6,10 +6,20 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Calendar.API.Controllers;
 
+/// <summary>
+/// Controller for managing calendar events
+/// </summary>
 [ApiController]
 [Route("api/v1/events")]
 public class EventsController(ApplicationDbContext context) : ControllerBase
 {
+    /// <summary>
+    /// Creates a new calendar event
+    /// </summary>
+    /// <param name="newEvent">The event details to create</param>
+    /// <returns>The created event with its assigned ID</returns>
+    /// <response code="201">Event created successfully</response>
+    /// <response code="400">Invalid event data provided</response>
     // POST /api/v1/events
     [HttpPost]
     public async Task<IActionResult> CreateEvent([FromBody] Event newEvent)
@@ -29,6 +39,13 @@ public class EventsController(ApplicationDbContext context) : ControllerBase
         return CreatedAtAction(nameof(GetEventById), new { id = newEvent.Id }, newEvent);
     }
 
+    /// <summary>
+    /// Retrieves all calendar events with optional date filtering
+    /// </summary>
+    /// <param name="startDate">Optional start date filter (events after this date)</param>
+    /// <param name="endDate">Optional end date filter (events before this date)</param>
+    /// <returns>A list of events matching the specified criteria</returns>
+    /// <response code="200">Events retrieved successfully</response>
     // GET /api/v1/events
     [HttpGet]
     public async Task<IActionResult> GetAllEvents([FromQuery] DateTime? startDate, [FromQuery] DateTime? endDate)
@@ -49,6 +66,13 @@ public class EventsController(ApplicationDbContext context) : ControllerBase
         return Ok(events);
     }
 
+    /// <summary>
+    /// Retrieves a specific calendar event by its ID
+    /// </summary>
+    /// <param name="id">The unique identifier of the event</param>
+    /// <returns>The event details including participants</returns>
+    /// <response code="200">Event found and returned</response>
+    /// <response code="404">Event not found</response>
     // GET /api/v1/events/{id}
     [HttpGet("{id}")]
     public async Task<IActionResult> GetEventById(int id)
@@ -65,6 +89,15 @@ public class EventsController(ApplicationDbContext context) : ControllerBase
         return Ok(calendarEvent);
     }
 
+    /// <summary>
+    /// Updates an existing calendar event
+    /// </summary>
+    /// <param name="id">The unique identifier of the event to update</param>
+    /// <param name="updatedEvent">The updated event data</param>
+    /// <returns>No content on successful update</returns>
+    /// <response code="204">Event updated successfully</response>
+    /// <response code="404">Event not found</response>
+    /// <response code="400">Invalid event data provided</response>
     // PUT /api/v1/events/{id}
     [HttpPut("{id}")]
     public async Task<IActionResult> UpdateEvent(int id, [FromBody] Event updatedEvent)
@@ -84,6 +117,13 @@ public class EventsController(ApplicationDbContext context) : ControllerBase
         return NoContent();
     }
 
+    /// <summary>
+    /// Deletes a calendar event
+    /// </summary>
+    /// <param name="id">The unique identifier of the event to delete</param>
+    /// <returns>No content on successful deletion</returns>
+    /// <response code="204">Event deleted successfully</response>
+    /// <response code="404">Event not found</response>
     // DELETE /api/v1/events/{id}
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteEvent(int id)
@@ -102,6 +142,15 @@ public class EventsController(ApplicationDbContext context) : ControllerBase
     
     // --- Participant Management ---
 
+    /// <summary>
+    /// Adds a participant to an existing calendar event
+    /// </summary>
+    /// <param name="eventId">The unique identifier of the event</param>
+    /// <param name="participant">The user to add as a participant</param>
+    /// <returns>Success confirmation</returns>
+    /// <response code="200">Participant added successfully</response>
+    /// <response code="404">Event or user not found</response>
+    /// <response code="400">Invalid participant data</response>
     // POST /api/v1/events/{eventId}/participants
     [HttpPost("{eventId}/participants")]
     public async Task<IActionResult> AddParticipant(int eventId, [FromBody] User participant)
@@ -123,6 +172,14 @@ public class EventsController(ApplicationDbContext context) : ControllerBase
         return Ok();
     }
 
+    /// <summary>
+    /// Removes a participant from a calendar event
+    /// </summary>
+    /// <param name="eventId">The unique identifier of the event</param>
+    /// <param name="userId">The unique identifier of the user to remove</param>
+    /// <returns>No content on successful removal</returns>
+    /// <response code="204">Participant removed successfully</response>
+    /// <response code="404">Event or participant not found</response>
     // DELETE /api/v1/events/{eventId}/participants/{userId}
     [HttpDelete("{eventId}/participants/{userId}")]
     public async Task<IActionResult> RemoveParticipant(int eventId, int userId)

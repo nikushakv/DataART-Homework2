@@ -159,3 +159,7 @@ C:\Users\kvini\OneDrive\Desktop\AICALENDAR\Calendar.API\obj\Debug\net9.0\refint\
 C:\Users\kvini\OneDrive\Desktop\AICALENDAR\Calendar.API\obj\Debug\net9.0\Calendar.API.pdb
 C:\Users\kvini\OneDrive\Desktop\AICALENDAR\Calendar.API\obj\Debug\net9.0\Calendar.API.genruntimeconfig.cache
 C:\Users\kvini\OneDrive\Desktop\AICALENDAR\Calendar.API\obj\Debug\net9.0\ref\Calendar.API.dll
+C:\Users\kvini\OneDrive\Desktop\AiCalendar\Calendar.API\bin\Debug\net9.0\Calendar.API.staticwebassets.runtime.json
+C:\Users\kvini\OneDrive\Desktop\AiCalendar\Calendar.API\bin\Debug\net9.0\Calendar.API.xml
+C:\Users\kvini\OneDrive\Desktop\AiCalendar\Calendar.API\obj\Debug\net9.0\compressed\zbz22tqazd-77tqhiayl6.gz
+C:\Users\kvini\OneDrive\Desktop\AiCalendar\Calendar.API\obj\Debug\net9.0\Calendar.API.xml

@@ -1,87 +1,55 @@
-// File: Calendar.API/Controllers/UsersController.cs
+// File: Calendar.API/Controllers/SchedulingController.cs
 using Calendar.Core;
+using Calendar.Core.Services;
 using Calendar.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
 namespace Calendar.API.Controllers;
 
+/// <summary>
+/// Controller for intelligent scheduling and finding available time slots
+/// </summary>
 [ApiController]
-[Route("api/v1/users")]
-public class UsersController(ApplicationDbContext context) : ControllerBase
+[Route("api/v1/scheduling")]
+public class SchedulingController(ApplicationDbContext context, SchedulingService schedulingService) : ControllerBase
 {
-    // POST /api/v1/users - Create a new user
-    [HttpPost]
-    public async Task<IActionResult> CreateUser([FromBody] User user)
+    /// <summary>
+    /// Finds available time slots for multiple users within a specified time range
+    /// </summary>
+    /// <param name="userIds">List of user IDs to check availability for</param>
+    /// <param name="searchStart">Start date and time for the search window</param>
+    /// <param name="searchEnd">End date and time for the search window</param>
+    /// <param name="durationInMinutes">Required duration for the meeting in minutes</param>
+    /// <returns>A list of available time slots that work for all specified users</returns>
+    /// <response code="200">Available slots found and returned</response>
+    /// <response code="400">Invalid parameters provided (e.g., no user IDs specified)</response>
+    /// <response code="500">Error occurred while processing the request</response>
+    [HttpGet("find-available-slots")]
+    public async Task<IActionResult> FindAvailableSlots(
+        [FromQuery] List<int> userIds, 
+        [FromQuery] DateTime searchStart, 
+        [FromQuery] DateTime searchEnd, 
+        [FromQuery] int durationInMinutes)
     {
-        if (user == null)
+        if (userIds == null || !userIds.Any())
         {
-            return BadRequest();
+            return BadRequest("At least one user ID must be provided.");
         }
 
-        context.Users.Add(user);
-        await context.SaveChangesAsync();
+        // Fetch all events for the specified users within the search window
+        var existingEvents = await context.Events
+            .Where(e => e.Participants.Any(p => userIds.Contains(p.Id)))
+            .Where(e => e.EndTime > searchStart && e.StartTime < searchEnd)
+            .ToListAsync();
 
-        return CreatedAtAction(nameof(GetUserById), new { id = user.Id }, user);
-    }
+        // Use the service to find available slots
+        var availableSlots = schedulingService.FindAvailableSlots(
+            existingEvents, 
+            searchStart, 
+            searchEnd, 
+            durationInMinutes);
 
-    // GET /api/v1/users - Get all users
-    [HttpGet]
-    public async Task<IActionResult> GetAllUsers()
-    {
-        var users = await context.Users.ToListAsync();
-        return Ok(users);
-    }
-
-    // GET /api/v1/users/{id} - Get a single user by their ID
-    [HttpGet("{id}")]
-    public async Task<IActionResult> GetUserById(int id)
-    {
-        var user = await context.Users.FindAsync(id);
-
-        if (user == null)
-        {
-            return NotFound();
-        }
-
-        return Ok(user);
-    }
-
-    // PUT /api/v1/users/{id} - Update an existing user
-    [HttpPut("{id}")]
-    public async Task<IActionResult> UpdateUser(int id, [FromBody] User updatedUser)
-    {
-        if (id != updatedUser.Id)
-        {
-            return BadRequest();
-        }
-
-        var user = await context.Users.FindAsync(id);
-        if (user == null)
-        {
-            return NotFound();
-        }
-
-        user.Name = updatedUser.Name;
-        user.Email = updatedUser.Email;
-        
-        await context.SaveChangesAsync();
-        return NoContent(); // Success, no content to return
-    }
-
-    // DELETE /api/v1/users/{id} - Delete a user
-    [HttpDelete("{id}")]
-    public async Task<IActionResult> DeleteUser(int id)
-    {
-        var user = await context.Users.FindAsync(id);
-        if (user == null)
-        {
-            return NotFound();
-        }
-
-        context.Users.Remove(user);
-        await context.SaveChangesAsync();
-        
-        return NoContent(); // Success, no content to return
+        return Ok(availableSlots);
     }
 }

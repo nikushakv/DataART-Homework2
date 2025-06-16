@@ -1,0 +1,18 @@
+{
+  "schema_version": "v1",
+  "name_for_model": "CalendarAPI",
+  "name_for_human": "AI Calendar",
+  "description_for_model": "API for managing calendar events and users. Use this to create, update, delete, and view events and their participants. You can also use it to find available meeting slots for multiple users.",
+  "description_for_human": "Manage your personal and team calendar using natural language.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "openapi",
+    "url": "/swagger/v1/swagger.json",
+    "is_user_authenticated": false
+  },
+  "logo_url": "https://www.example.com/logo.png",
+  "contact_email": "support@example.com",
+  "legal_info_url": "http://www.example.com/legal"
+}

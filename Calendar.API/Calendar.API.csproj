@@ -1,9 +1,10 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
-
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <!-- Add this line for XML documentation generation -->
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -19,5 +20,4 @@
     <ProjectReference Include="..\Calendar.Core\Calendar.Core.csproj" />
     <ProjectReference Include="..\Calendar.Infrastructure\Calendar.Infrastructure.csproj" />
   </ItemGroup>
-
 </Project>
